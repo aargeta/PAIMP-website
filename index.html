@@ -103,6 +103,32 @@
             font-size: 1.2em;
         }
 
+        .links {
+            margin-bottom: 20px;
+        }
+
+        .links a {
+            color: #00eaff; /* Match "Buy Now" button */
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .music-player {
+            margin: 20px auto;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .music-player audio {
+            width: 200px;
+            height: 30px;
+        }
+
         .development-section {
             display: flex;
             align-items: center;
@@ -130,7 +156,6 @@
         .buy-section {
             display: flex;
             align-items: center;
-            justify-content: center;
             margin: 40px auto;
             padding: 20px;
             max-width: 1200px;
@@ -139,14 +164,21 @@
             box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
         }
 
+        .buy-section .buy-links {
+            flex: 1;
+            text-align: left;
+            font-size: 1.2em;
+        }
+
         .buy-section .buy-links a {
-    display: block;
-    margin: 10px 0;
-    color: #00eaff; /* Updated to match the Buy Now button */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-}
+            display: block;
+            margin: 10px 0;
+            color: #00eaff; /* Match "Buy Now" button */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
         .buy-section .buy-links a:hover {
             text-decoration: underline;
         }
@@ -154,53 +186,7 @@
         .buy-section img {
             max-width: 40%;
             border-radius: 10px;
-        }
-
-        .paimping-section {
-            margin: 40px auto;
-            padding: 20px;
-            max-width: 1200px;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        }
-
-        .paimping-section h2 {
-            color: #ff007a;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .scrollable-wheel {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px;
-        }
-
-        .scrollable-wheel img {
-            max-width: 150px;
-            border-radius: 10px;
-        }
-
-        .music-section {
-            margin: 40px auto;
-            padding: 20px;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        }
-
-        .music-section h2 {
-            color: #ff007a;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        audio {
-            width: 100%;
-            outline: none;
+            margin-left: 20px;
         }
 
         footer {
@@ -238,7 +224,7 @@
             <a href="https://discord.gg/RvQkzTTK" target="_blank">Join our Discord</a>
             <a href="https://x.com/PAIMP_onchain" target="_blank">Learn about $PAIMP</a>
         </div>
-             <div class="music-player">
+        <div class="music-player">
             <h3>Hear my music here:</h3>
             <audio controls>
                 <source src="./music/PAIMPtrack.mp3" type="audio/mpeg">
@@ -263,22 +249,7 @@
             <a href="https://photon-sol.tinyastro.io/en/discover" target="_blank">Buy on Photon</a>
             <a href="https://raydium.io/swap/?inputMint=sol" target="_blank">Buy on Raydium</a>
         </div>
-        <img src="./images/PAIMPtokenomics.png" alt="$PAIMP Tokenomics" class="tokenomics-image">
-    </div>
-
-    <div class="paimping-section">
-        <h2>$PAIMPING</h2>
-        <div class="scrollable-wheel">
-            <img src="./images/photos1.png" alt="$PAIMP Image 1">
-            <img src="./images/photos2.png" alt="$PAIMP Image 2">
-            <img src="./images/photos3.png" alt="$PAIMP Image 3">
-            <img src="./images/photos4.png" alt="$PAIMP Image 4">
-            <img src="./images/photos5.png" alt="$PAIMP Image 5">
-            <img src="./images/photos6.png" alt="$PAIMP Image 6">
-            <img src="./images/photos7.png" alt="$PAIMP Image 7">
-            <img src="./images/photos8.png" alt="$PAIMP Image 8">
-            <img src="./images/photos9.png" alt="$PAIMP Image 9">
-        </div>
+        <img src="./images/PAIMPtokenomics.png" alt="$PAIMP Tokenomics">
     </div>
 
     <footer>
