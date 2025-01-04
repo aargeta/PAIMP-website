@@ -12,12 +12,27 @@
             background-color: #000;
             color: #fff;
             text-align: center;
-            background-image: url('./images/image.png');
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./images/PAIMPbgweb.png');
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center;
+            z-index: -1;
             opacity: 0.8;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.scrolled::before {
+            opacity: 0.5;
         }
 
         header {
@@ -54,6 +69,19 @@
             background-color: #008ecc;
         }
 
+        header .token-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            background-image: url('./images/PAIMPicon.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            border: 2px solid #ff007a;
+        }
+
         .main-content {
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.8);
@@ -75,30 +103,112 @@
             font-size: 1.2em;
         }
 
-        .links {
-            margin: 20px 0;
-            position: sticky;
-            top: 70px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
+        .development-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
+        }
+
+        .development-section img {
+            max-width: 40%;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .development-section .lore {
+            flex: 1;
+            text-align: left;
+            font-size: 1.2em;
+        }
+
+        .buy-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
+        }
+
+        .buy-section .buy-links {
+            flex: 1;
+            text-align: left;
+            font-size: 1.2em;
+            margin-right: 20px;
+        }
+
+        .buy-section .buy-links a {
+            display: block;
+            margin: 10px 0;
+            color: #00eaff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .buy-section .buy-links a:hover {
+            text-decoration: underline;
+        }
+
+        .buy-section img {
+            max-width: 40%;
             border-radius: 10px;
         }
 
-        .links a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            color: #fff;
-            text-decoration: none;
-            background-color: #00eaff;
-            border-radius: 5px;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        .paimping-section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
         }
 
-        .links a:hover {
-            background-color: #008ecc;
+        .paimping-section h2 {
+            color: #ff007a;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .scrollable-wheel {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .scrollable-wheel img {
+            max-width: 150px;
+            border-radius: 10px;
+        }
+
+        .music-section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
+        }
+
+        .music-section h2 {
+            color: #ff007a;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        audio {
+            width: 100%;
+            outline: none;
         }
 
         footer {
@@ -110,9 +220,15 @@
             border-top: 3px solid #ff007a;
         }
     </style>
+    <script>
+        window.addEventListener('scroll', () => {
+            document.body.classList.toggle('scrolled', window.scrollY > 100);
+        });
+    </script>
 </head>
 <body>
     <header>
+        <div class="token-icon"></div>
         <h1>$PAIMP</h1>
         <a href="#" class="buy-now">Buy Now</a>
     </header>
@@ -130,6 +246,48 @@
             <a href="https://discord.gg/RvQkzTTK" target="_blank">Join our Discord</a>
             <a href="https://x.com/PAIMP_onchain" target="_blank">Learn about $PAIMP</a>
         </div>
+    </div>
+
+    <div class="development-section">
+        <img src="./images/PAIMPDev.png" alt="$PAIMP Development">
+        <div class="lore">
+            <h2>The Development of $PAIMP</h2>
+            <p>$PAIMP was born from the intersection of artificial intelligence, blockchain innovation, and a flair for humor. With roots in Solana's cutting-edge technology, $PAIMP quickly rose to become a legend in the Web3 space, combining style, swagger, and utility.</p>
+        </div>
+    </div>
+
+    <div class="buy-section">
+        <div class="buy-links">
+            <h2>Where to Buy</h2>
+            <a href="#" target="_blank">Buy on Pump.fun</a>
+            <a href="#" target="_blank">Buy on Bullx</a>
+            <a href="#" target="_blank">Buy on Phantom</a>
+            <a href="#" target="_blank">Buy on Raydium</a>
+        </div>
+        <img src="./images/PAIMPtokenomics.png" alt="$PAIMP Tokenomics" class="tokenomics-image">
+    </div>
+
+    <div class="paimping-section">
+        <h2>$PAIMPING</h2>
+        <div class="scrollable-wheel">
+            <img src="./images/photos1.png" alt="$PAIMP Image 1">
+            <img src="./images/photos2.png" alt="$PAIMP Image 2">
+            <img src="./images/photos3.png" alt="$PAIMP Image 3">
+            <img src="./images/photos4.png" alt="$PAIMP Image 4">
+            <img src="./images/photos5.png" alt="$PAIMP Image 5">
+            <img src="./images/photos6.png" alt="$PAIMP Image 6">
+            <img src="./images/photos7.png" alt="$PAIMP Image 7">
+            <img src="./images/photos8.png" alt="$PAIMP Image 8">
+            <img src="./images/photos9.png" alt="$PAIMP Image 9">
+        </div>
+    </div>
+
+    <div class="music-section">
+        <h2>Hear my music here:</h2>
+        <audio controls>
+            <source src="./music/PAIMPtrack.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <footer>
