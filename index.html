@@ -204,45 +204,16 @@
             margin-bottom: 20px;
         }
 
-        .gallery {
+        .scrollable-wheel {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
         }
 
-        .gallery img {
+        .scrollable-wheel img {
             max-width: 150px;
             border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
-
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-        }
-
-        .lightbox:target {
-            display: flex;
         }
 
         footer {
@@ -305,43 +276,15 @@
 
     <div class="paimping-section">
         <h2>$PAIMPING</h2>
-        <div class="gallery">
-            <a href="#img1"><img src="./images/photos1.png" alt="$PAIMP Image 1"></a>
-            <a href="#img2"><img src="./images/photos2.png" alt="$PAIMP Image 2"></a>
-            <a href="#img3"><img src="./images/photos3.png" alt="$PAIMP Image 3"></a>
-            <a href="#img4"><img src="./images/photos4.png" alt="$PAIMP Image 4"></a>
-            <a href="#img5"><img src="./images/photos5.png" alt="$PAIMP Image 5"></a>
-            <a href="#img6"><img src="./images/photos6.png" alt="$PAIMP Image 6"></a>
-            <a href="#img7"><img src="./images/photos7.png" alt="$PAIMP Image 7"></a>
-            <a href="#img8"><img src="./images/photos8.png" alt="$PAIMP Image 8"></a>
-            <a href="#img9"><img src="./images/photos9.png" alt="$PAIMP Image 9"></a>
-        </div>
-
-        <div id="img1" class="lightbox">
+        <div class="scrollable-wheel">
             <img src="./images/photos1.png" alt="$PAIMP Image 1">
-        </div>
-        <div id="img2" class="lightbox">
             <img src="./images/photos2.png" alt="$PAIMP Image 2">
-        </div>
-        <div id="img3" class="lightbox">
             <img src="./images/photos3.png" alt="$PAIMP Image 3">
-        </div>
-        <div id="img4" class="lightbox">
             <img src="./images/photos4.png" alt="$PAIMP Image 4">
-        </div>
-        <div id="img5" class="lightbox">
             <img src="./images/photos5.png" alt="$PAIMP Image 5">
-        </div>
-        <div id="img6" class="lightbox">
             <img src="./images/photos6.png" alt="$PAIMP Image 6">
-        </div>
-        <div id="img7" class="lightbox">
             <img src="./images/photos7.png" alt="$PAIMP Image 7">
-        </div>
-        <div id="img8" class="lightbox">
             <img src="./images/photos8.png" alt="$PAIMP Image 8">
-        </div>
-        <div id="img9" class="lightbox">
             <img src="./images/photos9.png" alt="$PAIMP Image 9">
         </div>
     </div>
