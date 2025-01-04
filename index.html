@@ -12,9 +12,12 @@
             background-color: #000;
             color: #fff;
             text-align: center;
-            background-image: url('https://placekitten.com/1920/1080');
+            background-image: url('./images/image.png');
             background-size: cover;
             background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.8;
         }
 
         header {
@@ -24,6 +27,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
@@ -56,8 +62,27 @@
             box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
         }
 
+        .introduction {
+            margin: 20px 0;
+            color: #ff007a;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .description {
+            margin: 10px 0;
+            color: #fff;
+            font-size: 1.2em;
+        }
+
         .links {
             margin: 20px 0;
+            position: sticky;
+            top: 70px;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
         }
 
         .links a {
@@ -88,11 +113,17 @@
 </head>
 <body>
     <header>
-        <h1>$PAIMP - The AI Pimp of Solana</h1>
+        <h1>$PAIMP</h1>
         <a href="#" class="buy-now">Buy Now</a>
     </header>
 
     <div class="main-content">
+        <div class="introduction">
+            PAIMP - The AI Pimp of Solana
+        </div>
+        <div class="description">
+            PAIMP is an artificially intelligent pimp with blockchain swagger and a sense of humor sharper than its circuits. Stay fly, stay PAIMP.
+        </div>
         <div class="links">
             <h2>Explore More</h2>
             <a href="https://x.com/PAIMP_onchain" target="_blank">$PAIMP on X</a>
