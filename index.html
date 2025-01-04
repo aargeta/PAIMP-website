@@ -1,259 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$PAIMP | The AI Pimp</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('./images/PAIMPbgweb.png');
-            background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-position: center;
-            z-index: -1;
-            opacity: 0.8;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        body.scrolled::before {
-            opacity: 0.5;
-        }
-
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-bottom: 3px solid #ff007a;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            gap: 10px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #ff007a;
-            text-shadow: 2px 2px 5px #000;
-            flex: 1;
-        }
-
-        header .buy-now {
-            padding: 10px 20px;
-            background-color: #00eaff;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            font-size: 1.2em;
-        }
-
-        header .buy-now:hover {
-            background-color: #008ecc;
-        }
-
-        header .token-icon {
-            width: 60px;
-            height: 60px;
-            background-image: url('./images/PAIMPicon.png');
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-            border: 2px solid #ff007a;
-            flex-shrink: 0;
-        }
-
-        .main-content {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            margin: 20px;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        }
-
-        .introduction {
-            margin: 20px 0;
-            color: #ff007a;
-            font-weight: bold;
-            font-size: 2em;
-        }
-
-        .description {
-            margin: 10px 0;
-            color: #fff;
-            font-size: 1.2em;
-        }
-
-        .links {
-            margin-bottom: 20px;
-        }
-
-        .links a {
-            color: #00eaff; /* Match "Buy Now" button */
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        .music-player {
-            margin: 20px auto;
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .music-player audio {
-            width: 200px;
-            height: 30px;
-        }
-
-        .development-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 40px auto;
-            padding: 20px;
-            max-width: 1200px;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        }
-
-        .development-section img {
-            max-width: 40%;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
-
-        .development-section .lore {
-            flex: 1;
-            text-align: left;
-            font-size: 1.2em;
-        }
-
-        .buy-section {
-            display: flex;
-            align-items: center;
-            margin: 40px auto;
-            padding: 20px;
-            max-width: 1200px;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        }
-
-        .buy-section .buy-links {
-            flex: 1;
-            text-align: left;
-            font-size: 1.2em;
-        }
-
-        .buy-section .buy-links a {
-            display: block;
-            margin: 10px 0;
-            color: #00eaff; /* Match "Buy Now" button */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .buy-section .buy-links a:hover {
-            text-decoration: underline;
-        }
-
-        .buy-section img {
-            max-width: 40%;
-            border-radius: 10px;
-            margin-left: 20px;
-        }
-
-        footer {
-            margin-top: 20px;
-            padding: 10px;
-            font-size: 0.9em;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-top: 3px solid #ff007a;
-        }
-    </style>
-    <script>
-        window.addEventListener('scroll', () => {
-            document.body.classList.toggle('scrolled', window.scrollY > 100);
-        });
-    </script>
-</head>
-<body>
-    <header>
-        <div class="token-icon"></div>
-        <h1>$PAIMP</h1>
-        <a href="https://pump.fun/board" class="buy-now">Buy Now</a>
-    </header>
-
-    <div class="main-content">
-        <div class="introduction">
-            PAIMP - The AI Pimp of Solana
+   <div class="paimping-section">
+        <h2>$PAIMPING</h2>
+        <div class="scrollable-wheel">
+            <img src="./images/photos1.png" alt="$PAIMP Image 1" class="paimp-img">
+            <img src="./images/photos2.png" alt="$PAIMP Image 2" class="paimp-img">
+            <img src="./images/photos3.png" alt="$PAIMP Image 3" class="paimp-img">
+            <img src="./images/photos4.png" alt="$PAIMP Image 4" class="paimp-img">
+            <img src="./images/photos5.png" alt="$PAIMP Image 5" class="paimp-img">
+            <img src="./images/photos6.png" alt="$PAIMP Image 6" class="paimp-img">
+            <img src="./images/photos7.png" alt="$PAIMP Image 7" class="paimp-img">
+            <img src="./images/photos8.png" alt="$PAIMP Image 8" class="paimp-img">
+            <img src="./images/photos9.png" alt="$PAIMP Image 9" class="paimp-img">
         </div>
-        <div class="description">
-            PAIMP is an artificially intelligent pimp with blockchain swagger and a sense of humor sharper than its circuits. Stay fly, stay PAIMP.
-        </div>
-        <div class="links">
-            <h2>Explore More</h2>
-            <a href="https://x.com/PAIMP_onchain" target="_blank">$PAIMP on X</a>
-            <a href="https://discord.gg/RvQkzTTK" target="_blank">Join our Discord</a>
-            <a href="https://x.com/PAIMP_onchain" target="_blank">Learn about $PAIMP</a>
-        </div>
-        <div class="music-player">
-            <h3>Hear my music here:</h3>
-            <audio controls>
-                <source src="./music/PAIMPtrack.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-    </div>
-
-    <div class="development-section">
-        <img src="./images/PAIMPDev.png" alt="$PAIMP Development">
-        <div class="lore">
-            <h2>The Development of $PAIMP</h2>
-            <p>$PAIMP was born from the intersection of artificial intelligence, blockchain innovation, and a flair for humor. With roots in Solana's cutting-edge technology, $PAIMP quickly rose to become a legend in the Web3 space, combining style, swagger, and utility.</p>
-        </div>
-    </div>
-
-    <div class="buy-section">
-        <div class="buy-links">
-            <h2>Where to Buy</h2>
-            <a href="https://pump.fun/board" target="_blank">Buy on Pump.fun</a>
-            <a href="https://neo.bullx.io/" target="_blank">Buy on Bullx</a>
-            <a href="https://photon-sol.tinyastro.io/en/discover" target="_blank">Buy on Photon</a>
-            <a href="https://raydium.io/swap/?inputMint=sol" target="_blank">Buy on Raydium</a>
-        </div>
-        <img src="./images/PAIMPtokenomics.png" alt="$PAIMP Tokenomics">
     </div>
 
     <footer>
         <p>&copy; 2025 $PAIMP. Powered by AI, style, and blockchain finesse.</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        const images = document.querySelectorAll('.paimp-img');
+
+        window.addEventListener('scroll', () => {
+            images.forEach(img => {
+                const rect = img.getBoundingClientRect();
+                const inViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+                if (inViewport) {
+                    img.style.transform = 'scale(1.1)';
+                    img.style.opacity = '1';
+                } else {
+                    img.style.transform = 'scale(0.9)';
+                    img.style.opacity = '0.5';
+                }
+            });
+        });
+    </script>
