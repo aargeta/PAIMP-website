@@ -331,3 +331,35 @@
     <footer>
         <p>&copy; 2025 $PAIMP. Powered by AI, style, and blockchain finesse.</p>
     </footer>
+
+    <script>
+        async function sendMessage() {
+            const userInput = document.getElementById('chat-input').value;
+            const responseDiv = document.getElementById('chat-response');
+
+            if (!userInput.trim()) {
+                responseDiv.innerText = "Please enter a question!";
+                return;
+            }
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: userInput })
+                });
+
+                const data = await response.json();
+                if (data.response) {
+                    responseDiv.innerText = data.response;
+                } else if (data.error) {
+                    responseDiv.innerText = data.error;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                responseDiv.innerText = "Failed to connect to PAIMP. Try again later.";
+            }
+        }
+    </script>
+</body>
+</html>
