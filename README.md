@@ -57,7 +57,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 
-For inquiries or support, contact the $PAIMP team at [your-email@example.com] or join our [Discord community](https://discord.gg/CVujCjCdZc).
+For inquiries or support, contact the $PAIMP team at our [Discord](https://discord.gg/CVujCjCdZc).
 
 ---
 
