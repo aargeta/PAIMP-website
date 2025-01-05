@@ -226,6 +226,36 @@
             background-color: rgba(0, 0, 0, 0.8);
             border-top: 3px solid #ff007a;
         }
+
+        #chatbot-container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #chat-input {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #chat-response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -291,8 +321,13 @@
         </div>
     </div>
 
+    <div id="chatbot-container">
+        <h2>Chat with PAIMP</h2>
+        <textarea id="chat-input" placeholder="Ask PAIMP something..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <div id="chat-response"></div>
+    </div>
+
     <footer>
         <p>&copy; 2025 $PAIMP. Powered by AI, style, and blockchain finesse.</p>
     </footer>
-</body>
-</html>
