@@ -361,7 +361,7 @@
         <p>&copy; 2025 $PAIMP. Powered by AI, style, and blockchain finesse.</p>
     </footer>
 
-      <script>
+ <script>
         async function sendMessage() {
             const userInput = document.getElementById('chat-input').value;
             const responseDiv = document.getElementById('chat-response');
@@ -377,7 +377,7 @@
 
             try {
                 console.log('Sending request to Flask server...');
-                const response = await fetch('http://127.0.0.1:5000/chat', {
+                const response = await fetch('https://a243d1ea-779b-4da5-a1fa-29204d203664-00-dxqrd13at792.worf.replit.dev/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ question: userInput })
