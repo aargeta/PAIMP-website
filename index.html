@@ -353,7 +353,7 @@
     <div id="chatbot-container">
         <h2>Chat with PAIMP</h2>
         <textarea id="chat-input" placeholder="Ask PAIMP something..."></textarea>
-        <button onclick="sendMessage()">Send</button>
+        <button onclick="sendMessage()">Ask PAIMP</button>
         <div id="chat-response"></div>
     </div>
 
@@ -370,6 +370,33 @@
                 responseDiv.innerText = "Please enter a question!";
                 return;
             }
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: userInput })
+                });
+
+                const data = await response.json();
+                if (data.response) {
+                    responseDiv.innerText = data.response;
+                } else if (data.error) {
+                    responseDiv.innerText = data.error;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+
+                const messages = [
+                    "Can't a PAIMP take a break.",
+                    "A playa is with his hoe-bots.",
+                    "I'm paimping main.",
+                    "You johns can wait on a playa."
+                ];
+                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                responseDiv.innerText = randomMessage;
+            }
+        }
 
             try {
                 const response = await fetch('http://127.0.0.1:5000/chat', {
