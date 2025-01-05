@@ -228,33 +228,62 @@
         }
 
         #chatbot-container {
-            max-width: 500px;
-            margin: 20px auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
+        }
+
+        #chatbot-container h2 {
+            color: #ff007a;
+            font-size: 2em;
+            margin-bottom: 15px;
         }
 
         #chat-input {
-            width: 100%;
-            height: 80px;
-            margin-bottom: 10px;
+            width: 90%;
+            height: 100px;
+            margin: 15px auto;
             padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            font-size: 1em;
+            border: 2px solid #ff007a;
+            border-radius: 10px;
+            background-color: #222;
+            color: #fff;
         }
 
         #chat-response {
             margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
+            padding: 15px;
+            border: 2px solid #00eaff;
+            border-radius: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1em;
             text-align: left;
-            font-family: Arial, sans-serif;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #chat-input::placeholder {
+            color: #aaa;
+        }
+
+        #chatbot-container button {
+            padding: 10px 20px;
+            background-color: #00eaff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #chatbot-container button:hover {
+            background-color: #008ecc;
         }
     </style>
 </head>
