@@ -1,4 +1,4 @@
-# $PAIMP Website
+# $PAIMP Website - Working Edit
 
 Welcome to the official repository for the $PAIMP website! This project serves as the online hub for $PAIMP, the AI Pimp of Solana. The website showcases $PAIMP's development, tokenomics, and unique personality while offering visitors an engaging experience.
 
