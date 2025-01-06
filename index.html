@@ -10,7 +10,7 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Fredoka One', sans-serif; /* Correct Font */
+            font-family: 'Fredoka One', sans-serif;
             background-color: #000;
             color: #fff;
             text-align: center;
@@ -33,10 +33,6 @@
             transition: opacity 0.5s ease-in-out;
         }
 
-        body.scrolled::before {
-            opacity: 0.5;
-        }
-
         header {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
@@ -47,7 +43,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            gap: 10px;
         }
 
         header h1 {
@@ -81,7 +76,6 @@
             background-position: center;
             border-radius: 50%;
             border: 2px solid #ff007a;
-            flex-shrink: 0;
         }
 
         .main-content {
@@ -110,7 +104,7 @@
         }
 
         .links a {
-            color: #00eaff; /* Match "Buy Now" button */
+            color: #00eaff;
             text-decoration: none;
             font-weight: bold;
             margin: 0 10px;
@@ -124,11 +118,6 @@
             margin: 20px auto;
             text-align: center;
             max-width: 300px;
-        }
-
-        .music-player audio {
-            width: 200px;
-            height: 30px;
         }
 
         .development-section {
@@ -172,50 +161,41 @@
             font-size: 1.2em;
         }
 
-        .buy-section .buy-links a {
-            display: block;
-            margin: 10px 0;
-            color: #00eaff; /* Match "Buy Now" button */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .buy-section .buy-links a:hover {
-            text-decoration: underline;
-        }
-
         .buy-section img {
             max-width: 40%;
             border-radius: 10px;
             margin-left: 20px;
         }
 
-        .paimping-section {
-            margin: 40px auto;
+        #paimp-feature {
             padding: 20px;
-            max-width: 1200px;
-            background-color: rgba(0, 0, 0, 0.9);
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
         }
 
-        .paimping-section h2 {
+        #paimp-feature h2 {
             color: #ff007a;
             font-size: 2em;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .scrollable-wheel {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px;
+        .feature-placeholder {
+            text-align: center;
+            padding: 20px;
         }
 
-        .scrollable-wheel img {
-            max-width: 150px;
-            border-radius: 10px;
+        .feature-placeholder img {
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+
+        .feature-placeholder p {
+            font-size: 1.2em;
+            color: #fff;
+            font-weight: bold;
         }
 
         footer {
@@ -225,65 +205,6 @@
             color: #fff;
             background-color: rgba(0, 0, 0, 0.8);
             border-top: 3px solid #ff007a;
-        }
-
-        #chatbot-container {
-            padding: 20px;
-            margin: 40px auto;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        }
-
-        #chatbot-container h2 {
-            color: #ff007a;
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-
-        #chat-input {
-            width: 90%;
-            height: 100px;
-            margin: 15px auto;
-            padding: 10px;
-            font-size: 1em;
-            border: 2px solid #ff007a;
-            border-radius: 10px;
-            background-color: #222;
-            color: #fff;
-        }
-
-        #chat-response {
-            margin-top: 20px;
-            padding: 15px;
-            border: 2px solid #00eaff;
-            border-radius: 10px;
-            background-color: #333;
-            color: #fff;
-            font-size: 1em;
-            text-align: left;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-
-        #chat-input::placeholder {
-            color: #aaa;
-        }
-
-        #chatbot-container button {
-            padding: 10px 20px;
-            background-color: #00eaff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        #chatbot-container button:hover {
-            background-color: #008ecc;
         }
     </style>
 </head>
@@ -301,122 +222,18 @@
         <div class="description">
             PAIMP is an artificially intelligent pimp with blockchain swagger and a sense of humor sharper than its circuits. Stay fly, stay PAIMP.
         </div>
-        <div class="links">
-            <h2>Explore More</h2>
-            <a href="https://x.com/PAIMP_onchain" target="_blank">$PAIMP on X</a>
-            <a href="https://discord.gg/CVujCjCdZc" target="_blank">Join our Discord</a>
-            <a href="https://dexscreener.com/" target="_blank">Learn about $PAIMP</a>
-        </div>
-        <div class="music-player">
-            <h3>Hear my music here:</h3>
-            <audio controls>
-                <source src="./music/PAIMPtrack1.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
     </div>
 
-    <div class="development-section">
-        <img src="./images/PAIMPDev.png" alt="$PAIMP Development">
-        <div class="lore">
-            <h2>The Development of $PAIMP</h2>
-            <p>$PAIMP was born from the intersection of artificial intelligence, blockchain innovation, and a flair for humor. With roots in Solana's cutting-edge technology, $PAIMP quickly rose to become a legend in the Web3 space, combining style, swagger, and utility.</p>
+    <div id="paimp-feature">
+        <h2>Become a $PAIMP</h2>
+        <div class="feature-placeholder">
+            <img src="./images/feature-in-development.png" alt="Feature in Development">
+            <p>Our team is working hard to bring this feature to life. Stay tuned for updates!</p>
         </div>
-    </div>
-
-    <div class="buy-section">
-        <div class="buy-links">
-            <h2>Where to Buy</h2>
-            <a href="https://pump.fun/board" target="_blank">Buy on Pump.fun</a>
-            <a href="https://neo.bullx.io/" target="_blank">Buy on Bullx</a>
-            <a href="https://photon-sol.tinyastro.io/en/discover" target="_blank">Buy on Photon</a>
-            <a href="https://raydium.io/swap/?inputMint=sol" target="_blank">Buy on Raydium</a>
-        </div>
-        <img src="./images/PAIMPtokenomics.png" alt="$PAIMP Tokenomics">
-    </div>
-
-  <div class="paimping-section">
-    <h2>$PAIMPING</h2>
-    <div class="scrollable-wheel">
-        <img src="./images/photos1.png" alt="$PAIMP Image 1">
-        <img src="./images/photos2.png" alt="$PAIMP Image 2">
-        <img src="./images/photos3.png" alt="$PAIMP Image 3">
-        <img src="./images/photos4.png" alt="$PAIMP Image 4">
-        <img src="./images/photos5.png" alt="$PAIMP Image 5">
-        <img src="./images/photos6.png" alt="$PAIMP Image 6">
-        <img src="./images/photos7.png" alt="$PAIMP Image 7">
-        <img src="./images/photos8.png" alt="$PAIMP Image 8">
-        <img src="./images/photos9.png" alt="$PAIMP Image 9">
-        <img src="./images/photos10.png" alt="$PAIMP Image 10">
-        <img src="./images/photos11.png" alt="$PAIMP Image 11">
-        <img src="./images/photos12.png" alt="$PAIMP Image 12">
-        <img src="./images/photos13.png" alt="$PAIMP Image 13">
-        <img src="./images/photos14.png" alt="$PAIMP Image 14">
-        <img src="./images/photos15.png" alt="$PAIMP Image 15">
-        <img src="./images/photos16.png" alt="$PAIMP Image 16">
-        <img src="./images/photos17.png" alt="$PAIMP Image 17">
-    </div>
-</div>
-
-    <div id="chatbot-container">
-        <h2>Chat with PAIMP</h2>
-        <textarea id="chat-input" placeholder="Ask PAIMP something..."></textarea>
-        <button onclick="sendMessage()">Ask PAIMP</button>
-        <div id="chat-response"></div>
     </div>
 
     <footer>
-        <p>&copy; 2025 $PAIMP. Powered by AI, style, and blockchain finesse.</p>
+        <p>&copy; 2025 $PAIMP. Powered by ChatGPT, style, and blockchain finesse.</p>
     </footer>
-
- <script>
-        async function sendMessage() {
-            const userInput = document.getElementById('chat-input').value;
-            const responseDiv = document.getElementById('chat-response');
-
-            // Log the user input
-            console.log('User input:', userInput);
-
-            if (!userInput.trim()) {
-                console.warn('No input provided by the user.');
-                responseDiv.innerText = "Please enter a question!";
-                return;
-            }
-
-            try {
-                console.log('Sending request to Flask server...');
-                const response = await fetch('https://a243d1ea-779b-4da5-a1fa-29204d203664-00-dxqrd13at792.worf.replit.dev/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ question: userInput })
-                });
-
-                // Log the response status and headers
-                console.log('Response status:', response.status);
-                console.log('Response headers:', response.headers);
-
-                if (!response.ok) {
-                    console.error(HTTP error! Status: ${response.status});
-                    responseDiv.innerText = Error: Unable to connect. Status: ${response.status};
-                    return;
-                }
-
-                const data = await response.json();
-
-                // Log the response data
-                console.log('Response data:', data);
-
-                if (data.response) {
-                    responseDiv.innerText = data.response;
-                } else if (data.error) {
-                    console.warn('Server returned an error:', data.error);
-                    responseDiv.innerText = data.error;
-                }
-            } catch (error) {
-                console.error('An error occurred:', error);
-                responseDiv.innerText = "Failed to connect to PAIMP. Try again later.";
-            }
-        }
-    </script>
 </body>
 </html>
