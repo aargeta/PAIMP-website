@@ -96,16 +96,15 @@
             box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
         }
 
-        .section-bubble img {
-            max-width: 40%;
-            border-radius: 10px;
-            margin: 10px auto;
+        .scrollable-wheel {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
         }
 
-        .paimping-section img,
         .scrollable-wheel img {
             max-width: 150px;
-            height: auto;
             border-radius: 10px;
         }
 
@@ -118,11 +117,29 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
         }
 
+        .gallery {
+            margin-top: 20px;
+        }
+
+        .gallery h3 {
+            color: #00eaff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
         .gallery-grid img {
             max-width: 150px;
             height: auto;
             border-radius: 10px;
-            transition: transform 0.3s ease;
+            border: 2px solid #ff007a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         footer {
@@ -134,7 +151,7 @@
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <div class="token-icon"></div>
         <h1>$PAIMP</h1>
@@ -189,13 +206,16 @@
             <ul>
                 <li><a href="https://pump.fun/board" target="_blank">Buy on Pump.fun</a></li>
                 <li><a href="https://neo.bullx.io/" target="_blank">Buy on Bullx</a></li>
+                <li><a href="https://photon-sol.tinyastro.io/en/discover" target="_blank">Buy on Photon</a></li>
+                <li><a href="https://raydium.io/swap/?inputMint=sol" target="_blank">Buy on Raydium</a></li>
             </ul>
         </div>
         <img src="./images/PAIMPtokenomics.png" alt="$PAIMP Tokenomics">
     </div>
 
-    <!-- Before and After Preview -->
-    <div class="feature-preview">
+    <!-- Become a PAIMP Section -->
+    <div class="section-bubble" id="paimp-feature">
+        <h2>Become a $PAIMP</h2>
         <div class="before-after">
             <div>
                 <h3>Before</h3>
@@ -206,11 +226,10 @@
                 <img src="./images/after-example.png" alt="After Example">
             </div>
         </div>
-        <p>This is just a sneak peek of what the $PAIMP feature will bring. Stay tuned for the full launch!</p>
     </div>
 
-    <!-- Gallery of Paimpified Examples -->
-    <div class="gallery">
+    <!-- Gallery Section -->
+    <div class="section-bubble gallery">
         <h3>Paimpified Examples</h3>
         <div class="gallery-grid">
             <img src="./images/person1.png" alt="Paimpified Example 1">
