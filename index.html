@@ -7,6 +7,7 @@
     <!-- Add Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
+        /* General Styling */
         body {
             margin: 0;
             padding: 0;
@@ -86,44 +87,7 @@
             box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
         }
 
-        .introduction {
-            margin: 20px 0;
-            color: #ff007a;
-            font-weight: bold;
-            font-size: 2em;
-        }
-
-        .description {
-            margin: 10px 0;
-            color: #fff;
-            font-size: 1.2em;
-        }
-
-        .links {
-            margin-bottom: 20px;
-        }
-
-        .links a {
-            color: #00eaff;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        .music-player {
-            margin: 20px auto;
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .development-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .section-bubble {
             margin: 40px auto;
             padding: 20px;
             max-width: 1200px;
@@ -132,177 +96,103 @@
             box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
         }
 
-        .development-section img {
+        .section-bubble img {
             max-width: 40%;
             border-radius: 10px;
-            margin-right: 20px;
+            margin: 10px auto;
         }
 
-        .development-section .lore {
-            flex: 1;
-            text-align: left;
-            font-size: 1.2em;
-        }
-
-        .paimping-section {
-            margin: 40px auto;
-            padding: 20px;
-            max-width: 1200px;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.6);
-        }
-
-        .paimping-section h2 {
-            color: #ff007a;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .scrollable-wheel {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px;
-        }
-
+        .paimping-section img,
         .scrollable-wheel img {
             max-width: 150px;
+            height: auto;
             border-radius: 10px;
-        }
-
-        /* $PAIMP Feature Section */
-        #paimp-feature {
-            padding: 40px;
-            margin: 40px auto;
-            max-width: 1000px;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-radius: 20px;
-            box-shadow: 0 0 25px rgba(255, 0, 122, 0.8);
-            text-align: center;
-        }
-
-        #paimp-feature h2 {
-            color: #ff007a;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-shadow: 0px 0px 10px #ff007a;
-        }
-
-        .feature-preview {
-            margin-bottom: 30px;
-        }
-
-        .before-after {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .before-after div {
-            text-align: center;
-            flex: 1;
-            margin: 0 10px;
-        }
-
-        .before-after h3 {
-            color: #ff007a;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            text-shadow: 0px 0px 5px #ff007a;
         }
 
         .before-after img {
-            max-width: 100%;
-            height: auto;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
             border: 3px solid #ff007a;
-        }
-
-        .gallery {
-            margin-top: 20px;
-        }
-
-        .gallery h3 {
-            color: #00eaff;
-            font-size: 2em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-shadow: 0px 0px 10px #00eaff;
-        }
-
-        .gallery-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
         }
 
         .gallery-grid img {
             max-width: 150px;
+            height: auto;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border: 2px solid #ff007a;
             transition: transform 0.3s ease;
-        }
-
-        .gallery-grid img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.8);
         }
 
         footer {
             margin-top: 20px;
             padding: 10px;
             font-size: 0.9em;
-            color: #fff;
             background-color: rgba(0, 0, 0, 0.8);
-            border-top: 3px solid #ff007a;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="token-icon"></div>
         <h1>$PAIMP</h1>
         <a href="https://pump.fun/board" class="buy-now">Buy Now</a>
     </header>
 
+    <!-- Main Content -->
     <div class="main-content">
         <div class="introduction">
             PAIMP - The AI Pimp of Solana
         </div>
         <div class="description">
-            PAIMP is an artificially intelligent pimp with blockchain swagger and a sense of humor sharper than its circuits. Stay fly, stay PAIMP.
-        </div>
-        <div class="links">
-            <h2>Explore More</h2>
-            <a href="https://x.com/PAIMP_onchain" target="_blank">$PAIMP on X</a>
-            <a href="https://discord.gg/CVujCjCdZc" target="_blank">Join our Discord</a>
-            <a href="https://dexscreener.com/" target="_blank">Learn about $PAIMP</a>
-        </div>
-        <div class="music-player">
-            <h3>Hear my music here:</h3>
-            <audio controls>
-                <source src="./music/PAIMPtrack1.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            PAIMP is an artificially intelligent pimp with blockchain swagger and a sense of humor sharper than its circuits.
         </div>
     </div>
 
-    <div class="development-section">
+    <!-- Development Section -->
+    <div class="section-bubble">
+        <h2>The Development of $PAIMP</h2>
         <img src="./images/PAIMPDev.png" alt="$PAIMP Development">
-        <div class="lore">
-            <h2>The Development of $PAIMP</h2>
-            <p>$PAIMP was born from the intersection of artificial intelligence, blockchain innovation, and a flair for humor. With roots in Solana's cutting-edge technology, $PAIMP quickly rose to become a legend in the Web3 space, combining style, swagger, and utility.</p>
+        <p>$PAIMP was born from the intersection of AI, blockchain innovation, and humor.</p>
+    </div>
+
+    <!-- PAIMPING Section -->
+    <div class="section-bubble paimping-section">
+        <h2>$PAIMPING</h2>
+        <div class="scrollable-wheel">
+            <img src="./images/photos1.png" alt="$PAIMP Image 1">
+            <img src="./images/photos2.png" alt="$PAIMP Image 2">
+            <img src="./images/photos3.png" alt="$PAIMP Image 3">
+            <img src="./images/photos4.png" alt="$PAIMP Image 4">
+            <img src="./images/photos5.png" alt="$PAIMP Image 5">
+            <img src="./images/photos6.png" alt="$PAIMP Image 6">
+            <img src="./images/photos7.png" alt="$PAIMP Image 7">
+            <img src="./images/photos8.png" alt="$PAIMP Image 8">
+            <img src="./images/photos9.png" alt="$PAIMP Image 9">
+            <img src="./images/photos10.png" alt="$PAIMP Image 10">
+            <img src="./images/photos11.png" alt="$PAIMP Image 11">
+            <img src="./images/photos12.png" alt="$PAIMP Image 12">
+            <img src="./images/photos13.png" alt="$PAIMP Image 13">
+            <img src="./images/photos14.png" alt="$PAIMP Image 14">
+            <img src="./images/photos15.png" alt="$PAIMP Image 15">
+            <img src="./images/photos16.png" alt="$PAIMP Image 16">
+            <img src="./images/photos17.png" alt="$PAIMP Image 17">
         </div>
     </div>
 
-    <div id="paimp-feature">
-        <h2>Become a $PAIMP</h2>
+    <!-- Where to Buy Section -->
+    <div class="section-bubble buy-section">
+        <h2>Where to Buy</h2>
+        <div>
+            <ul>
+                <li><a href="https://pump.fun/board" target="_blank">Buy on Pump.fun</a></li>
+                <li><a href="https://neo.bullx.io/" target="_blank">Buy on Bullx</a></li>
+            </ul>
+        </div>
+        <img src="./images/PAIMPtokenomics.png" alt="$PAIMP Tokenomics">
+    </div>
 
     <!-- Before and After Preview -->
     <div class="feature-preview">
@@ -330,31 +220,9 @@
         </div>
     </div>
 
-    <div class="paimping-section">
-        <h2>$PAIMPING</h2>
-        <div class="scrollable-wheel">
-            <img src="./images/photos1.png" alt="$PAIMP Image 1">
-            <img src="./images/photos2.png" alt="$PAIMP Image 2">
-            <img src="./images/photos3.png" alt="$PAIMP Image 3">
-            <img src="./images/photos4.png" alt="$PAIMP Image 4">
-            <img src="./images/photos5.png" alt="$PAIMP Image 5">
-            <img src="./images/photos6.png" alt="$PAIMP Image 6">
-            <img src="./images/photos7.png" alt="$PAIMP Image 7">
-            <img src="./images/photos8.png" alt="$PAIMP Image 8">
-            <img src="./images/photos9.png" alt="$PAIMP Image 9">
-            <img src="./images/photos10.png" alt="$PAIMP Image 10">
-            <img src="./images/photos11.png" alt="$PAIMP Image 11">
-            <img src="./images/photos12.png" alt="$PAIMP Image 12">
-            <img src="./images/photos13.png" alt="$PAIMP Image 13">
-            <img src="./images/photos14.png" alt="$PAIMP Image 14">
-            <img src="./images/photos15.png" alt="$PAIMP Image 15">
-            <img src="./images/photos16.png" alt="$PAIMP Image 16">
-            <img src="./images/photos17.png" alt="$PAIMP Image 17">
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 $PAIMP. Powered by ChatGPT, style, and blockchain finesse.</p>
+        <p>&copy; 2025 $PAIMP. Powered by ChatGPT and blockchain finesse.</p>
     </footer>
 </body>
 </html>
